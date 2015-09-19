@@ -53,7 +53,7 @@
 #endif
 
 #if defined(INCLUDE_CC_NAV)
-inline void ZeroNav(void);
+inline static void ZeroNav(void);
 #define NAV_SLEW  0.9f  // 0.9 50% 1Sec, 0.95 50% 2.5Sec, 0.97 50% 4.5Sec
 volatile float NavRollCorr = 0.0f;
 volatile float NavPitchCorr = 0.0f;
@@ -480,11 +480,15 @@ static void setHomeLocation(GPSPositionSensorData *gpsData)
 
 #elif defined(INCLUDE_CC_NAV)
 
-inline void ZeroNav(void) {
+inline static void ZeroNav(void) {
 	NavRollCorr = NavPitchCorr = NavYawCorr = NavAltCorr = 0.0f;
 }
 
-inline float Make180(float h) {
+inline static float Sign(float v) {
+	return( v < 0.0f ? -1.0f : 1.0f);
+} // Sign
+
+inline static float Make180(float h) {
 
 	while (h < -180.0f)
 		h += 360.0f;
@@ -494,14 +498,23 @@ inline float Make180(float h) {
 	return(h);
 } // Make180
 
-inline float Sign(float v) {
-	return( v < 0.0f ? -1.0f : 1.0f);
-} // Sign
+inline static float TurnHysteresis(float courseError){
+	static bool TurnCommit = false;
+	static float TurnSign;
 
-inline float myabsf(float v) {
-	return (v < 0.0f ? -v : v);
-} // myabsf
+	float abscourseError = fabsf(courseError);
+	if (abscourseError > 160) {
+		TurnCommit = true;
+		TurnSign = Sign(courseError);
+	}
+	else if (abscourseError < 135)
+		TurnCommit = false;
 
+	if (TurnCommit)
+		courseError = TurnSign * abscourseError;
+
+	return(courseError);
+} // TurnHysteresis
 
 static void computeNAVCorrection(GPSPositionSensorData *gpsData)
 { // derived/crunched from updateFixedDesiredAttitude()
@@ -527,24 +540,23 @@ static void computeNAVCorrection(GPSPositionSensorData *gpsData)
 		float homeHeading = RAD2DEG(atan2f(EastE, NorthE)); // y, x
 		float courseError = Make180(homeHeading - gpsData->Heading);
 
+		courseError = TurnHysteresis(courseError);
+
 		if (((GetCurrentFrameType() == FRAME_TYPE_FIXED_WING) || (GetCurrentFrameType() == FRAME_TYPE_CUSTOM))
-				 && (stabDesired.StabilizationMode.Roll == STABILIZATIONDESIRED_STABILIZATIONMODE_ATTITUDE)
-				 && (stabDesired.StabilizationMode.Yaw == STABILIZATIONDESIRED_STABILIZATIONMODE_RATE)) {
+#if defined(NAV_USE_ROLL)
+				&& (stabDesired.StabilizationMode.Roll == STABILIZATIONDESIRED_STABILIZATIONMODE_ATTITUDE)
+#endif
+		){
 
-			static bool TurnCommit = false;
-			float abscourseError = fabsf(courseError);
-			if (abscourseError > 160)
-				TurnCommit = true;
-			else if (abscourseError < 135)
-				TurnCommit = false;
-
-			if (TurnCommit)
-				courseError = abscourseError;
+			// not a precondition but rudder/elev models using YAW corr should have roll set to manual
+			// otherwise rudder induces roll which fights with roll attitude correction. Pitch could be
+			// set to attitude and rudder to rate.
 
 			// range depends on input config min/neutral/max values ?
 			// 1000..1500..2000 => -1..1
 			// 1000..1000..2000 => 0..1
 			// 2000..1000..1000 => -1..0
+
 			KpScaling = accessory.AccessoryVal;
 
 #if defined(NAV_USE_ROLL)

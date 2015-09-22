@@ -20,7 +20,7 @@ The RTH function is controlled using a pot/knob connected to Accessory 0. If the
 
 Channel 7 can of course be whatever is most appropriate on your Tx.
 
-RTH should not be used if the windspeed exceeds half the nominal flying spped of the aircraft as it cannot reliably obtain a GPS course over ground. This is obviously so if the aircraft's airspeed is the same as or less than the windspeed. 
+RTH should not be used if the windspeed exceeds half the nominal flying speed of the aircraft as it cannot reliably obtain a GPS course over ground. This is obviously so if the aircraft's airspeed is the same as or less than the windspeed. 
 
 ##GPS##
 
@@ -28,7 +28,7 @@ The RTH function requires a uBlox GPS unit using binary transmission at 38KBaud.
   
 ##Ailerons##
 
-For aicraft with ailerons you should choose the ROLL version of the firmware setting roll mode to attitude and pitch to either rate or attitude. Yaw should be set to rate. You can elect to use the YAW version of the firmware but in that case the ailerons may resist the turn in part leading to an adverse interaction however if the aircraft has good self levelling capability you can set the roll mode to rate.
+For aircraft with ailerons you should choose the ROLL version of the firmware setting roll mode to attitude and pitch to either rate or attitude. Yaw should be set to rate. You can elect to use the YAW version of the firmware but in that case the ailerons may resist the turn in part leading to an adverse interaction however if the aircraft has good self levelling capability you can set the roll mode to rate.
 
 ##Elevons##
 
@@ -44,7 +44,7 @@ Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is achieve
 
 ##Is it Working?##
 
-In most cases you will not have GCS on the flight line so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple heartbeat" blink every second to being on most of the time in a flickering manner. At this point you should select the staibilisation mode you will be using then turn the RTH pot/knob to each extreme. You should see the appropriate control surface(s), depending on whether you are using YAW or ROLL firmware, move from their neutral position one way then the other. The RTH function always thinks it is flying and will produce corrections even if sitting on the ground.  For this reason make sure the pot is centred before takeoff.
+In most cases you will not have GCS on the flight line, so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple "heartbeat" blink every second to being on most of the time in a flickering manner. At this point you should select the staibilisation mode you will be using then turn the RTH pot/knob to each extreme. You should see the appropriate control surface(s), depending on whether you are using YAW or ROLL firmware, move from their neutral position one way then the other. The RTH function always thinks it is flying and will produce corrections even if sitting on the ground.  For this reason make sure the pot is *centred* before takeoff.
 
 ##Disclaimer##
 

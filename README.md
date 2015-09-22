@@ -9,7 +9,9 @@ Support for return to home (RTH) and navigation generally for these boards was d
 
 The solution adopted is to use the GPS course made good to calculate either a roll or yaw correction for fixed wing aircraft. These corrections are then fed directly to the attitude control routines bypassing the original path planning and execution schemes. 
 
-Muticopters use yaw correction only with the simple expedient of pitching forward thus establishing a course over ground. Altitude hold may be added trivially for most sedate powered gliders and the stubs for this are also given. The assumption however is that the aircraft is still visible but orientation has been lost and that altitude is being managed by the pilot.
+Muticopters use yaw correction only with the simple expedient of pitching forward thus establishing a course over ground. 
+
+Altitude hold may be added trivially for most sedate powered gliders and the stubs for this are also given. The assumption however is that the aircraft is still visible but orientation has been lost and that altitude is being managed by the pilot.
 
 The "opfw" firmware files may be posted at a later date.
 

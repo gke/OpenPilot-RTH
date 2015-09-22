@@ -18,6 +18,8 @@ The RTH function is controlled using a pot/knob connected to Accessory 0. If the
 
 ![https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG](https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG)
 
+Channel 7 can of course be whatever is most appropriate on your Tx.
+
 RTH should not be used if the windspeed exceeds half the nominal flying spped of the aircraft as it cannot reliably obtain a GPS course over ground. This is obviously so if the aircraft's airspeed is the same as or less than the windspeed. 
 
 ##GPS##
@@ -39,6 +41,10 @@ The rudder is used to control both yaw and roll. Almost all rudder/elevator airc
 ##Multicopters##
 
 Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is achieved by pitching the aircraft forward to a small angle (5 deg). Its behaviour should be the same as aa rudder/elevator aircraft yawing slowly towards home.
+
+##Is it Working?##
+
+In most cases you will not have GCS on the flight line so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple blimk every second to being on most of the time in a flickering manner. At this point you should select the staibilisation mode you will be using then turn the RTH pot/knob to each extreme. You should see the appropriate control surface move from their neutral position one way then the other. The RTH function always thinks it is flying and will produce corrections even if sitting on the ground.  For this reason make sure the pot is centred before takeoff.
 
 ##Disclaimer##
 

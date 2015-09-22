@@ -38,6 +38,7 @@ The rudder is used to control both yaw and roll. Almost all rudder/elevator airc
 
 Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is achieved by pitching the aircraft forward to a small angle (5 deg). Its behaviour should be the same as aa rudder/elevator aircraft yawing slowly towards home.
 
+##Disclaimer##
 
 This information and the files associated with it are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
 

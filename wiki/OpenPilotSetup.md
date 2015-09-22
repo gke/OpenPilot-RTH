@@ -1,7 +1,7 @@
 OpenPilot Configuraton for RTH
 ==============================
 
-It is assumed that you have tuned your PID paramters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generaly of a significantly lower value than that for multicopters.
+It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generaly of a significantly lower value than that for multicopters.
 
 The RTH home function is intended to be used for model aircraft with:
   * Ailerons
@@ -15,6 +15,12 @@ It may also be used for multicopters but that has not been tested extensively.
 ##General##
 
 The RTH function is controlled using a pot/knob connected to Accessory 0. If the pot is centred then RTH is inactive. If turned in the appropriate direction the aircraft will turn towards home.  The more the knob is turned the quicker the turn. If turned the other direction the aircraft will steer directly away from the launch/home point. 
+
+RTH should not be used if the windspeed exceeds half the nominal flying spped of the aircraft as it cannot reliably obtain a GPS course over ground. This is obviously so if the aircrafts airspeed is the same as or less than the windspeed. 
+
+##GPS##
+
+The RTH function requires a uBlox GPS unit using binary transmission at 38KBaud.  Refer to the OpenPilot documentation for connecting a GPS unit.  Verify that your GPS does in fact display your position reliably using the OpenPilot GCS.
   
 ##Ailerons##
 
@@ -30,9 +36,10 @@ The rudder is used to control both yaw and roll. Almost all rudder/elevator airc
 
 ##Multicopters##
 
-Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is acheived by pitching the aircraft forward to a small angle (5 deg) and then as for rudder elevator yawing slowly towards home.
+Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is acheived by pitching the aircraft forward to a small angle (5 deg). Its behaviour should be the same as aa rudder/elevator aircraft yawing slowly towards home.
 
-Provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
+
+This information and the files associated with it are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
 
 
 

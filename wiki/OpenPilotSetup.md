@@ -1,14 +1,14 @@
 OpenPilot Configuration for RTH
 ===============================
 
-It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generaly of a significantly lower value than that for multicopters.
+The RTH function is intended to provide a reasonable effort to bring relatively sedate aircraft such as Radians, EasyStars, Bixlers and flying wings such as the Phantom towards the launch point or home.
+
+It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generally of a significantly lower value than that for multicopters.
 
 The RTH home function is intended to be used for model aircraft with:
   * Ailerons
   * Elevons
   * Rudder and elevator only
-  
-and that are of a sedate nature typically aircraft such as Radians, EasyStars, Bixlers and wings such as the Phantom.
 
 It may also be used for multicopters but that has not been tested extensively.
 
@@ -44,7 +44,7 @@ Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is achieve
 
 ##Is it Working?##
 
-In most cases you will not have GCS on the flight line, so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple "heartbeat" blink every second to being on most of the time in a flickering manner. At this point you should select the staibilisation mode you will be using then turn the RTH pot/knob to each extreme. You should see the appropriate control surface(s), depending on whether you are using YAW or ROLL firmware, move from their neutral position one way then the other. 
+In most cases you will not have GCS on the flight line, so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple "heartbeat" blink every second to being on most of the time in a flickering manner once the home position has been obtained. At this point you should select the staibilisation mode you will be using then turn the RTH pot/knob to each extreme. You should see the appropriate control surface(s), depending on whether you are using YAW or ROLL firmware, move from their neutral position one way then the other. 
 
 The RTH function always thinks it is flying and will produce corrections even if sitting on the ground.  For this reason make sure the pot is centred before takeoff.
 

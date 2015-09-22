@@ -25,8 +25,6 @@ RTH should not be used if the windspeed exceeds half the nominal flying speed of
 ##GPS##
 
 The RTH function requires a uBlox GPS unit using binary transmission at 38KBaud.  Refer to the OpenPilot documentation for connecting a GPS unit.  Verify that your GPS does in fact display your position reliably using the OpenPilot GCS.
-
-![https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/GPS.JPG](https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/GPS.JPG)
   
 ##Ailerons##
 

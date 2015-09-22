@@ -1,4 +1,4 @@
-OpenPilot Turn To Home for CC and CC3D Boards 
+OpenPilot RTH for CC and CC3D Boards 
 =============================================
 
 The files contained in this repository restore RTH, or more correctly turn to home (TTH), for the CC & CC3D boards.

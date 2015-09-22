@@ -15,8 +15,7 @@ Altitude hold may be added trivially for most sedate powered gliders and the stu
 
 The "opfw" firmware files may be posted at a later date.
 
-See OpenPilotSetup.
-![https://github.com/gke/Openilot-RTH/blob/master/wiki/OpenPilotSetup.md](https://github.com/gke/Openilot-RTH/blob/master/wiki/OpenPilotSetup.md)
+See OpenPilotSetup in wiki.
 
 These files are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
 

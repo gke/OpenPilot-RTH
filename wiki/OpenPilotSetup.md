@@ -16,6 +16,8 @@ It may also be used for multicopters but that has not been tested extensively.
 
 The RTH function is controlled using a pot/knob connected to Accessory 0. If the pot is centred then RTH is inactive. If turned in the appropriate direction the aircraft will turn towards home.  The more the knob is turned the quicker the turn. If turned the other direction the aircraft will steer directly away from the launch/home point. 
 
+![https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG](https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG)
+
 RTH should not be used if the windspeed exceeds half the nominal flying spped of the aircraft as it cannot reliably obtain a GPS course over ground. This is obviously so if the aircraft's airspeed is the same as or less than the windspeed. 
 
 ##GPS##

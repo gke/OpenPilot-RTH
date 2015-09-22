@@ -18,7 +18,7 @@ The RTH function is controlled using a pot/knob connected to Accessory 0. If the
 
 ![https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG](https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG)
 
-Channel 7 can of course be whatever is most appropriate on your Tx.
+Chan 7 can of course be whatever is most appropriate on your Tx.
 
 RTH should not be used if the windspeed exceeds half the nominal flying speed of the aircraft as it cannot reliably obtain a GPS course over ground. This is obviously so if the aircraft's airspeed is the same as or less than the windspeed. 
 

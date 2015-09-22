@@ -1,5 +1,5 @@
 Return Home (RTH) for OpenPilot CC and CC3D Boards 
-=============================================
+==================================================
 
 The files contained in this repository restore RTH, or more correctly turn to home (TTH), for the CC & CC3D boards.
 
@@ -14,6 +14,8 @@ Muticopters use yaw correction only with the simple expedient of pitching forwar
 Altitude hold may be added trivially for most sedate powered gliders and the stubs for this are also given. The assumption however is that the aircraft is still visible but orientation has been lost and that altitude is being managed by the pilot.
 
 The "opfw" firmware files may be posted at a later date.
+
+See OpenPilotSetup.
 
 These files are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
 

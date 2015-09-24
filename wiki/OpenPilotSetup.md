@@ -3,8 +3,6 @@ OpenPilot Configuration for RTH
 
 The RTH function is intended to provide a reasonable effort to bring relatively sedate aircraft such as Radians, EasyStars, Bixlers and flying wings such as the Phantom towards the launch point or home.
 
-It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generally of a significantly lower value than that for multicopters.
-
 The RTH home function is intended to be used for model aircraft with:
   * Ailerons
   * Elevons
@@ -12,9 +10,13 @@ The RTH home function is intended to be used for model aircraft with:
 
 It may also be used for multicopters but that has not been tested extensively.
 
+##Important##
+
+It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generally of a significantly lower value than that for multicopters.
+
 ##General##
 
-The RTH function is controlled using a pot/knob connected to Accessory 0. If the pot is centred then RTH is inactive. If turned in the appropriate direction the aircraft will turn towards home.  The more the knob is turned the quicker the turn. If turned the other direction the aircraft will steer directly away from the launch/home point. 
+The RTH function is controlled using a pot/knob connected to Accessory 0.  The more the knob is turned the quicker the turn. If you find that the aircraft actually turns away from the launch/home point you will have to reverse the channel sense for the pot. 
 
 ![https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG](https://github.com/gke/OpenPilot-RTH/blob/master/wiki/graphics/Acc0.JPG)
 

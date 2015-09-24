@@ -560,13 +560,13 @@ static void computeNAVCorrection(GPSPositionSensorData *gpsData)
 			KpScaling = accessory.AccessoryVal;
 
 #if defined(NAV_USE_ROLL)
-			NavRollCorr = NavRollCorr * NAV_SLEW - (courseError * (KpScaling * 0.5f)) * (1.0f - NAV_SLEW);
-			NavRollCorr = boundsymf(NavRollCorr, 20.0f); // deg
+			NavRollCorr =  -courseError * KpScaling * 0.5f;
+			NavRollCorr = boundsymf(NavRollCorr, 30.0f); // deg
 
 			NavYawCorr = NavPitchCorr = 0.0f; // CRITICAL
 #else
-			NavYawCorr = NavYawCorr * NAV_SLEW - (courseError * (KpScaling * 0.5f)) * (1.0f - NAV_SLEW);
-			NavYawCorr = boundsymf(NavYawCorr, 30.0f); // deg/sec
+			NavYawCorr = -courseError * KpScaling * 0.5f;
+			NavYawCorr = boundsymf(NavYawCorr, 20.0f); // deg/sec
 
 			NavRollCorr = NavPitchCorr = 0.0f; // CRITICAL
 #endif
@@ -593,8 +593,8 @@ static void computeNAVCorrection(GPSPositionSensorData *gpsData)
 
 				KpScaling = accessory.AccessoryVal;
 
-				NavYawCorr = NavYawCorr * NAV_SLEW - (courseError * (KpScaling * 0.3f)) * (1.0f - NAV_SLEW);
-				NavYawCorr = boundsymf(NavYawCorr, 30.0f);
+				NavYawCorr = -courseError * KpScaling * 0.3f;
+				NavYawCorr = boundsymf(NavYawCorr, 10.0f);
 				NavPitchCorr = -5.0f; // pitch forward TODO: check sense
 			} else
 				ZeroNav();

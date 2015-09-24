@@ -12,7 +12,7 @@ It may also be used for multicopters but that has not been tested extensively.
 
 ##Important##
 
-It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. Be aware that the fixed wing PID coefficients are generally of a significantly lower value than that for multicopters.
+It is assumed that you have tuned your PID parameters using accepted techniques described elsewhere. The RTH function supplies roll angles or turn rates and expects the PID loops to be tuned such that the aircraft will will follow theses commanded values. Be aware that the fixed wing PID coefficients are generally of a significantly lower value than that for multicopters. 
 
 You should also make sure your Tx rates or control throws are sufficient to override the flight controller. Relying on the mode switch to get you out of trouble is "courageous".
 

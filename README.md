@@ -13,8 +13,6 @@ Muticopters may adopt the simple expedient of pitching forward, thus establishin
 
 Altitude hold may be added trivially for most sedate powered gliders and the stubs for this are also given. The assumption however is that the aircraft is still visible but orientation has been lost and that altitude is being managed by the pilot.
 
-The "opfw" firmware files may be posted at a later date.
-
 See OpenPilotSetup in wiki.
 
 These files are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.

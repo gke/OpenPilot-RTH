@@ -15,7 +15,7 @@ Altitude hold may be added trivially for most sedate powered gliders and the stu
 
 See OpenPilotSetup in wiki.
 
-These files are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
+DISCLAIMER: These files are provided under the GNU Public License (GPL) Version 3 and are for information and use by those who accept ANY AND ALL ASSOCIATED RISKS.
 
 
 

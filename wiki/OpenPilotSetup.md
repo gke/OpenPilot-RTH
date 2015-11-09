@@ -1,7 +1,7 @@
 OpenPilot Configuration for RTH
 ===============================
 
-The RTH function is intended to provide a reasonable effort to bring relatively sedate aircraft such as Radians, EasyStars, Bixlers and flying wings such as the Phantom towards the launch point or home.
+The RTH function is intended to provide a reasonable effort to bring relatively sedate aircraft such as Radians, EasyStars, Bixlers and flying wings such as the Phantom towards the launch point or home. You should read the Disclaimer below.
 
 The RTH home function is intended to be used for model aircraft with:
   * Ailerons

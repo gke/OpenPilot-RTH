@@ -5,6 +5,10 @@ The files contained in this repository restore RTH, or more correctly turn to ho
 
 OpenPilot support for the CC and CC3D boards and variants ceased with OpenPilot-RELEASE-15.02.02. The source repositories for this revision were available on the OpenPilot site at the time of writing (18 Sept 2015).
 
+https://github.com/openpilot/OpenPilot/releases/tag/RELEASE-15.02.02
+
+OpenPilot itself is now Norwegian Blue.
+
 Support for return to home (RTH) and navigation generally for these boards was displaced by other functionality directed principally at multicopters some time ago. This occured well prior to the 15.02.02 release. It has been widely stated, incorrectly, that RTH was no longer possible within the available space on the ArmF321xx processor.
 
 The solution adopted here is to use the GPS course made good to calculate either a roll or yaw correction for fixed wing aircraft. These corrections are then fed directly to the attitude control routines bypassing the original path planning and execution schemes. 

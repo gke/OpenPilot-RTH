@@ -3,11 +3,11 @@ Return Home (RTH) for OpenPilot CC and CC3D Boards
 
 The files contained in this repository restore RTH, or more correctly turn to home (TTH), for the CC & CC3D boards.
 
-OpenPilot support for the CC and CC3D boards and variants ceased with OpenPilot-RELEASE-15.02.02. The source repositories for this revision were available on the OpenPilot site at the time of writing (18 Sept 2015).
+OpenPilot support for the CC and CC3D boards and variants ceased with OpenPilot-RELEASE-15.02.02. The source repositories for this revision were still available (31 Jan 2017) here:
 
 https://github.com/openpilot/OpenPilot/releases/tag/RELEASE-15.02.02
 
-OpenPilot itself is now Norwegian Blue.
+OpenPilot itself is now Norwegian Blue but forked into TauLabs and LibrePilot.
 
 Support for return to home (RTH) and navigation generally for these boards was displaced by other functionality directed principally at multicopters some time ago. This occured well prior to the 15.02.02 release. It has been widely stated, incorrectly, that RTH was no longer possible within the available space on the ArmF321xx processor.
 

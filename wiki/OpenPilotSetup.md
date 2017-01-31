@@ -50,7 +50,7 @@ Roll and pitch must be set to attitude mode and yaw to rate mode. RTH is achieve
 
 ##Is it Working?##
 
-In most cases you will not have GCS on the flight line, so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple "heartbeat" blink every second to being on most of the time in a flickering manner once the home position has been obtained. At this point you should select the staibilisation mode you will be using then turn the RTH pot/knob to its maximum value. You should see the appropriate control surface(s), depending on whether you are using YAW or ROLL firmware, move. 
+In most cases you will not have GCS on the flight line, so you should monitor the CC/CC3D board LEDs. The Blue LED will change from a simple "heartbeat" blink every second to being on most of the time in a flickering manner once the home position has been obtained. At this point you should select the stabilisation mode you will be using then turn the RTH pot/knob to its maximum value. You should see the appropriate control surface(s), depending on whether you are using YAW or ROLL firmware, move. 
 
 The RTH function always thinks it is flying and will produce corrections even if sitting on the ground.  For this reason make sure the pot to its minimum setting before takeoff.
 
